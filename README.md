@@ -23,8 +23,8 @@ To quickly set up and run Elara using Docker, follow these steps:
 docker compose up -d
 ```
 3. Wait until both services are up and running:
-4. The Python API will be available at http://localhost:8000.
-5. The SvelteKit app will be available at http://localhost:5173 (check Usage for details).
+4. The Python API will be available at `http://localhost:8000`.
+5. The SvelteKit app will be available at `http://localhost:5173` (check Usage for details).
 
 ### Run without Docker
 
