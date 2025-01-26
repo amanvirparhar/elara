@@ -13,7 +13,22 @@ Watch the [demo](https://youtu.be/K7PJqIbQVjE) to see Elara in action.
 
 ## Setup
 
-### Python
+### Run with Docker
+
+To quickly set up and run Elara using Docker, follow these steps:
+
+1. Ensure you have [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/) installed on your system.
+2. Use the following command to build and start the services:
+```bash
+docker compose up -d
+```
+3. Wait until both services are up and running:
+4. The Python API will be available at http://localhost:8000.
+5. The SvelteKit app will be available at http://localhost:5173 (check Usage for details).
+
+### Run without Docker
+
+#### Python
 
 First, if you don't have [`uv`](https://github.com/astral-sh/uv) installed on your system, install it with the following commands (`uv` allows for easy package and version management for Python projects):
 
@@ -35,7 +50,7 @@ cd python && uv run --python 3.12 --with-requirements requirements.txt main.py
 
 Wait until you see `INFO:     Application startup complete.` in the terminal before running and using the SvelteKit app (ensures that the model has been loaded and the server is ready to handle requests).
 
-### SvelteKit
+#### SvelteKit
 
 Run the SvelteKit app with `npm`:
 
