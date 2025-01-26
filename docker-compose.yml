@@ -1,0 +1,16 @@
+services:
+  elara-api:
+    build:
+      dockerfile: ./python/Dockerfile
+    container_name: elara-api
+    ports:
+      - "8000:8000"
+
+  elara-ui:
+    build:
+      dockerfile: ./sveltekit/Dockerfile
+    container_name: elara-ui
+    ports:
+      - "5173:5173"
+    depends_on:
+      - elara-api
